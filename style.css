@@ -1,0 +1,133 @@
+html{
+  scroll-behavior:smooth;
+  scroll-padding-top:80px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#080c18;color:#e5e7eb;font-family:Inter,system-ui,sans-serif;line-height:1.6;overflow-x:hidden}
+.gold{color:#0bbda2}
+.bold{font-weight:600}
+.header{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:18px 40px;border-bottom:1px solid rgba(11,189,162,0.25);
+  flex-wrap:wrap;gap:10px;position:sticky;top:0;z-index:1000;
+  background:rgba(8,12,24,0.9);backdrop-filter:blur(12px);
+}
+.logo{color:#0bbda2;font-size:22px;letter-spacing:1px;display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo img{width:42px;height:42px;object-fit:contain;border-radius:8px;filter:drop-shadow(0 0 8px rgba(11,189,162,0.35))}
+.logo b{color:#fff}
+.header nav{display:flex;gap:10px;align-items:center;font-size:14px;flex-wrap:wrap}
+.header nav a{
+  color:#cbd5e1;text-decoration:none;padding:8px 18px;border-radius:20px;
+  border:1px solid rgba(11,189,162,0.18);background:rgba(11,189,162,0.06);
+  font-weight:500;font-size:13px;letter-spacing:0.5px;transition:all .3s ease;cursor:pointer;
+}
+.header nav a:hover{color:#000;background:#0bbda2;border-color:#0bbda2;transform:translateY(-2px);box-shadow:0 4px 15px rgba(11,189,162,0.3)}
+.header nav a.active{background:#0bbda2;color:#000;border-color:#0bbda2;box-shadow:0 0 15px rgba(11,189,162,0.4)}
+.badge{
+  border:1px solid rgba(11,189,162,0.4);padding:8px 16px;border-radius:20px;color:#0bbda2;
+  background:linear-gradient(135deg, rgba(11,189,162,0.12), rgba(11,189,162,0.02));
+  white-space:nowrap;font-size:12px;box-shadow:0 0 12px rgba(11,189,162,0.12) inset;
+}
+.hero{display:flex;gap:40px;padding:50px 40px;align-items:center}
+.hero-text{flex:1}
+.hero-text h1{font-size:52px;font-weight:800;line-height:1;color:#fff}
+.hero-text h2{font-size:28px;margin:10px 0}
+.hero-text p{color:#cbd5e1;margin-top:14px;max-width:600px}
+.actions{display:flex;gap:12px;margin-top:22px;flex-wrap:wrap}
+.btn-gold{background:#0bbda2;color:#000;padding:12px 24px;border-radius:10px;font-weight:700;text-decoration:none;display:inline-block;transition:.3s}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(11,189,162,0.35)}
+.btn-outline{border:1px solid #0bbda2;color:#0bbda2;padding:12px 24px;border-radius:10px;text-decoration:none;display:inline-block;transition:.3s}
+.btn-outline:hover{background:rgba(11,189,162,0.1)}
+.card{background:#0f1424;border:1px solid rgba(11,189,162,0.35);border-radius:14px;padding:24px}
+.code-card{flex:0 0 380px;max-width:100%}
+.code-head{display:flex;justify-content:space-between;margin-bottom:16px;color:#64748b}
+code{color:#e2e8f0;font-family:monospace;font-size:14px;line-height:1.8;word-break:break-word}
+code .p{color:#c084fc} code .s{color:#5eead4} code .g{color:#86efac} code .y{color:#0bbda2}
+.section-title{text-align:center;letter-spacing:1px;margin:40px 0 20px;font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;padding:0 40px 50px}
+.grid .card{text-align:center;transition:all .3s ease}
+.grid .card:hover{border-color:#0bbda2;transform:translateY(-5px)}
+.grid h3{color:#fff;margin-bottom:8px}
+.grid p{font-size:14px;color:#94a3b8}
+.project-img{width:100%;height:180px;object-fit:cover;border-radius:10px;border:1px solid rgba(11,189,162,0.2);margin-bottom:16px;transition:transform .3s ease}
+.card:hover .project-img{transform:scale(1.03)}
+.tags{display:flex;gap:8px;justify-content:center;margin:12px 0;flex-wrap:wrap}
+.tags span{border:1px solid rgba(11,189,162,0.4);color:#0bbda2;font-size:11px;padding:4px 10px;border-radius:20px}
+.btn-gold.small{padding:8px 16px;font-size:13px;display:inline-block;margin-top:10px;text-decoration:none}
+.contact-section{max-width:720px;margin:20px auto 60px;text-align:center;padding:0 40px}
+.contact-sub{color:#94a3b8;margin-bottom:24px;font-size:15px}
+.form-card{padding:28px;text-align:left}
+.form-row{display:flex;gap:12px;margin-bottom:12px}
+.form-row input{width:50%}
+.form-card input, .form-card textarea{width:100%;background:#080c18;border:1px solid rgba(11,189,162,0.25);color:#fff;padding:13px 14px;border-radius:10px;margin-bottom:12px;font-family:inherit;font-size:14px}
+.form-card input:focus, .form-card textarea:focus{outline:none;border-color:#0bbda2}
+.btn-gold.full{width:100%;border:none;cursor:pointer;font-size:16px;padding:13px}
+.form-msg{margin-top:12px;font-size:14px;color:#0bbda2;display:none;text-align:center}
+footer{text-align:center;padding:20px;border-top:1px solid rgba(11,189,162,0.2);color:#64748b;font-size:13px}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .hero{flex-direction:column;padding:30px 20px}
+  .grid{grid-template-columns:1fr 1fr;padding:0 20px 40px}
+  .header{padding:16px 20px}
+  .hero-text h1{font-size:42px}
+  .code-card{flex:1 1 100%}
+}
+@media(max-width:600px){
+  body{padding:0}
+  .header{flex-direction:column;align-items:flex-start;padding:14px 16px}
+  .header nav{width:100%;justify-content:space-between;gap:8px}
+  .header nav a{font-size:12px;padding:7px 14px;flex:1;text-align:center}
+  .hero{padding:24px 16px;gap:20px}
+  .hero-text h1{font-size:32px;line-height:1.1}
+  .hero-text h2{font-size:18px}
+  .hero-text p{font-size:14px}
+  .actions{flex-direction:column;width:100%}
+  .actions a{width:100%;text-align:center}
+  .section-title{margin:30px 0 16px;font-size:12px}
+  .grid{grid-template-columns:1fr;padding:0 16px 30px;gap:16px}
+  .project-img{height:200px}
+  .contact-section{padding:0 16px;margin:10px auto 40px}
+  .form-card{padding:18px}
+  .form-row{flex-direction:column}
+  .form-row input{width:100%}
+  code{font-size:12px}
+  .code-card{padding:16px}
+}
+
+/* === MODO CLARO TEAL === */
+body.light{ background:#f0faf8; color:#1e293b; }
+body.light .header{ background:rgba(240,250,248,0.9) !important; backdrop-filter:blur(12px); border-bottom:1px solid rgba(0,0,0,0.08) !important; }
+body.light .logo b{ color:#0f172a; }
+body.light .header nav a{ color:#334155; background:rgba(0,0,0,0.04); border-color:rgba(0,0,0,0.08); }
+body.light .header nav a:hover, body.light .header nav a.active{ background:#0bbda2; color:#000; }
+body.light .badge{ color:#065a4e; border-color:rgba(11,189,162,0.35); background:rgba(11,189,162,0.2); }
+body.light .hero-text h1{ color:#0f172a; }
+body.light .hero-text p{ color:#475569; }
+body.light .card{ background:#fff; border-color:rgba(0,0,0,0.1); box-shadow:0 4px 20px rgba(0,0,0,0.05); }
+body.light code{ color:#334155; }
+body.light .grid h3{ color:#0f172a; }
+body.light .grid p, body.light .contact-sub{ color:#64748b; }
+body.light .project-img{ border-color:rgba(0,0,0,0.08); }
+body.light .form-card input, body.light .form-card textarea{ background:#fff; color:#0f172a; border-color:rgba(0,0,0,0.12); }
+body.light footer{ border-color:rgba(0,0,0,0.1); color:#94a3b8; }
+body.light .btn-outline{ border-color:#0a6b5e; color:#0a6b5e; }
+body.light .btn-outline:hover{ background:rgba(11,189,162,0.2); }
+body.light .code-card{ background:#ffffff !important; border-color:rgba(0,0,0,0.08) !important; box-shadow:0 8px 30px rgba(0,0,0,0.06); }
+body.light .code-card .code-head{color:#64748b}
+body.light .code-card code{color:#1e293b}
+body.light .code-card code .p{color:#7c3aed}
+body.light .code-card code .s{color:#0d9488}
+body.light .code-card code .g{color:#16a34a}
+body.light .code-card code .y{color:#0a6b5e}
+body.light .grid .card{ background:#ffffff !important; border-color:rgba(0,0,0,0.08) !important; box-shadow:0 8px 30px rgba(0,0,0,0.06) !important; }
+body.light .grid .card h3{color:#0f172a !important}
+body.light .grid .card p{color:#475569 !important}
+body.light .grid .card .tags span{ color:#065a4e !important; border-color:rgba(11,189,162,0.3) !important; background:rgba(11,189,162,0.18) !important; }
+body.light .grid .card .project-img{ border-color:rgba(0,0,0,0.06) !important; background:#f8fafc; }
+body.light .grid .card .btn-gold.small{ background:#0bbda2 !important; color:#000 !important; }
+body.light .contact-section .form-card{ background:#ffffff !important; border-color:rgba(0,0,0,0.08) !important; box-shadow:0 8px 30px rgba(0,0,0,0.06) !important; }
+body.light .contact-section .form-card input, body.light .contact-section .form-card textarea{ background:#ffffff !important; color:#0f172a !important; border:1px solid rgba(0,0,0,0.15) !important; }
+body.light .contact-section .form-card input::placeholder, body.light .contact-section .form-card textarea::placeholder{ color:#94a3b8 !important; }
+body.light .contact-section .contact-sub{ color:#475569 !important; }
+body.light .contact-section .form-msg{ color:#065a4e !important; }
